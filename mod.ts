@@ -3,6 +3,32 @@
 // 📜
 
 /**
+ * @module
+ *
+ * This module contains logger class for formatting log strings
+ *
+ * ```ts
+ * // main.ts
+ * 
+ * import { Logger } from "@xlsoftware/logger";
+ *
+ * export const log = new Logger()
+ * ```
+ * 
+ *  * ```ts
+ * // module.ts
+ * 
+ * import { log } from "./main.ts";
+ *
+ * log.log('module.ts is up and running', 'module.ts')
+ * ```
+ * 
+ * ```
+ * [08.03.2024, 21:07:21.64] (module.ts): module.ts is up and running
+ * ```
+ */
+
+/**
  * @interface LogObject - Represents a log entry object.
  * @property {string} timestamp - The timestamp of the log entry.
  * @property {string} msg - The log message.
