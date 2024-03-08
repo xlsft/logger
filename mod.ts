@@ -39,7 +39,7 @@ export class Logger {
      * @param {string} msg - The log message.
      * @param {string | undefined} from - The source of the log entry (optional).
      */
-    log(msg: string, from?: string) {
+    log(msg: string, from?: string): void {
     
         const date = new Date();
         const timestamp = `${date.toLocaleString('ru-RU')}.${date.getMilliseconds()}`
@@ -58,7 +58,7 @@ export class Logger {
      * @param {string} msg - The error message.
      * @param {string | undefined} from - The source of the error (optional).
      */
-    error(msg: string, from?: string) {
+    error(msg: string, from?: string): void {
         const date = new Date();
         const timestamp = `${date.toLocaleString('ru-RU')}.${date.getMilliseconds()}`
         const log = `ERROR: [${timestamp}] ${from ? '(' + from + ')' : ''}: ${msg}`
@@ -76,7 +76,7 @@ export class Logger {
      * Generates a formatted string of all log entries.
      * @returns {string} - Formatted log entries string.
      */
-    generate() {
+    generate(): string {
         const logs: string[] = []
         this.logarr.forEach(log => {
             logs.push(log.log)
@@ -88,7 +88,7 @@ export class Logger {
      * Returns the array of log entries.
      * @returns {LogObject[]} - Array of log entries.
      */
-    generate_array() {
+    generate_array(): LogObject[] {
         return this.logarr
     }
 }
