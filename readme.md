@@ -1,6 +1,6 @@
 # Logger
 
-## This module contains logger class for formatting log strings
+This module contains logger class for formatting log strings
 
 ### Example use
 
