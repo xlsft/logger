@@ -1,5 +1,8 @@
 {
-    "name": "@xlsoftware/logger",
-    "version": "0.1.3",
-    "exports": "./mod.ts"
+  "name": "@xlsoftware/logger",
+  "version": "0.2.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "@denosaurs/event": "jsr:@denosaurs/event@^2.0.2"
+  }
 }

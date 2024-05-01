@@ -5,21 +5,28 @@ This module contains logger class for formatting log strings
 ### Example use
 
 ```ts
-    // main.ts
+// main.ts
 
-    import { Logger } from "@xlsoftware/logger";
+import { Logger } from "@xlsoftware/logger";
 
-    export const log = new Logger()
+export const log = new Logger();
+
+// or
+
+export const log = new Logger({
+  colored: true,
+  maxStackSize: 1000,
+});
 ```
 
 ```ts
-    // module.ts
-    
-    import { log } from "./main.ts";
+// module.ts
 
-    log.log('module.ts is up and running', 'module.ts')
+import { log } from "./main.ts";
+
+log.log("module.ts is up and running", "module.ts");
 ```
 
 ```
-    [08.03.2024, 21:07:21.64] (module.ts): module.ts is up and running
+[08.03.2024, 21:07:21.64] (module.ts): module.ts is up and running
 ```
