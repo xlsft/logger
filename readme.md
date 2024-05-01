@@ -30,3 +30,7 @@ log.log("module.ts is up and running", "module.ts");
 ```
 [08.03.2024, 21:07:21.64] (module.ts): module.ts is up and running
 ```
+
+### Special thanks
+
+[fl3xice](https://github.com/fl3xice) - Added colorful logs and optimize stack size
